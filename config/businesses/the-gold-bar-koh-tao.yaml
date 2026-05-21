@@ -1,0 +1,31 @@
+business:
+  id: the-gold-bar-koh-tao
+  displayName: The Gold Bar Koh Tao
+  gbpLocationId: pending
+  timezone: Asia/Bangkok
+  locale: en
+
+brand:
+  toneOfVoice: [social, polished, inviting]
+  preferredCtas: [Visit us tonight, See what's on, Message us]
+  prohibitedWording: [unlimited drinking, guaranteed party]
+  targetKeywords: [Koh Tao bar, cocktails Koh Tao, nightlife Koh Tao]
+  terminology:
+    preferred: [cocktails, events, evening atmosphere]
+    avoided: [cheap booze]
+  hashtags: [kohtao, cocktails, nightlife]
+
+media:
+  preferredImageStyle: real venue images, drinks, people, warm evening lighting
+  preferredImageDimensions:
+    width: 1200
+    height: 900
+
+posting:
+  preferredFrequency: twice-weekly
+  autoPostingEnabled: false
+  duplicateWindowDays: 21
+
+reviews:
+  responseStyle: upbeat, friendly, concise
+  includeServiceKeywordsWhenNatural: true
