@@ -1,0 +1,42 @@
+business:
+  id: example-business
+  displayName: Example Business
+  gbpLocationId: replace-with-gbp-location-id
+  timezone: Asia/Bangkok
+  locale: en
+
+brand:
+  toneOfVoice:
+    - helpful
+    - clear
+    - confident
+  preferredCtas:
+    - Learn more
+    - Book now
+    - Contact us
+  prohibitedWording:
+    - guaranteed ranking
+    - best in the world
+  targetKeywords:
+    - replace with target keyword
+  terminology:
+    preferred:
+      - client
+    avoided:
+      - customer
+  hashtags: []
+
+media:
+  preferredImageStyle: realistic, brand-aligned, not overprocessed
+  preferredImageDimensions:
+    width: 1200
+    height: 900
+
+posting:
+  preferredFrequency: weekly
+  autoPostingEnabled: false
+  duplicateWindowDays: 30
+
+reviews:
+  responseStyle: warm, specific, concise
+  includeServiceKeywordsWhenNatural: true
