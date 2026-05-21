@@ -1,0 +1,31 @@
+business:
+  id: professional-diver-training
+  displayName: Professional Diver Training
+  gbpLocationId: pending
+  timezone: Asia/Bangkok
+  locale: en
+
+brand:
+  toneOfVoice: [expert, safety-focused, encouraging]
+  preferredCtas: [Book a consultation, Explore courses, Contact us]
+  prohibitedWording: [guaranteed certification, cheapest]
+  targetKeywords: [professional diver training, dive instructor course, Koh Tao diving]
+  terminology:
+    preferred: [diver training, instructor development, safety standards]
+    avoided: [quick certificate]
+  hashtags: [divetraining, kohtao, scuba]
+
+media:
+  preferredImageStyle: real training moments, clear water, professional equipment
+  preferredImageDimensions:
+    width: 1200
+    height: 900
+
+posting:
+  preferredFrequency: weekly
+  autoPostingEnabled: false
+  duplicateWindowDays: 30
+
+reviews:
+  responseStyle: professional, appreciative, specific
+  includeServiceKeywordsWhenNatural: true
