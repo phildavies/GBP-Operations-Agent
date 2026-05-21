@@ -1,0 +1,31 @@
+business:
+  id: site-skills-knowhow
+  displayName: Site Skills Knowhow
+  gbpLocationId: pending
+  timezone: Asia/Bangkok
+  locale: en
+
+brand:
+  toneOfVoice: [practical, credible, direct]
+  preferredCtas: [Request training info, Contact our team, View courses]
+  prohibitedWording: [instant qualification, guaranteed job]
+  targetKeywords: [site skills training, vocational training, safety training]
+  terminology:
+    preferred: [skills training, workplace readiness, practical assessment]
+    avoided: [shortcut]
+  hashtags: [siteskills, training, workforce]
+
+media:
+  preferredImageStyle: practical training, real equipment, professional learners
+  preferredImageDimensions:
+    width: 1200
+    height: 900
+
+posting:
+  preferredFrequency: weekly
+  autoPostingEnabled: false
+  duplicateWindowDays: 30
+
+reviews:
+  responseStyle: clear, appreciative, outcome-focused
+  includeServiceKeywordsWhenNatural: true
