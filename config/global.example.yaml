@@ -1,0 +1,30 @@
+system:
+  defaultMode: draft
+  requireHumanApproval: true
+  livePublishing:
+    enabled: false
+    allowedActions: []
+
+google:
+  accountSelection: connected-account
+  gbp:
+    scopes:
+      - business.manage
+  sheets:
+    enabled: true
+
+approval:
+  requiredFor:
+    - publish_post
+    - update_listing
+    - reply_to_review
+    - upload_media
+  approvers:
+    - owner
+  expiryHours: 72
+
+logging:
+  actionLogPath: logs/actions.jsonl
+  reportOutputPath: reports/generated
+  includeGeneratedDrafts: true
+  includeApiPayloads: false
