@@ -1,0 +1,31 @@
+business:
+  id: parawans-thai-home-cooking-classes
+  displayName: Parawan's Thai Home Cooking Classes
+  gbpLocationId: pending
+  timezone: Asia/Bangkok
+  locale: en
+
+brand:
+  toneOfVoice: [warm, welcoming, authentic]
+  preferredCtas: [Book a class, Message us, Reserve your place]
+  prohibitedWording: [fake Thai, tourist trap]
+  targetKeywords: [Thai cooking class, Koh Tao cooking class, home cooking Thailand]
+  terminology:
+    preferred: [home cooking, authentic Thai recipes, hands-on class]
+    avoided: [generic cooking demo]
+  hashtags: [thaicooking, kohtao, cookingclass]
+
+media:
+  preferredImageStyle: bright food photography, real class moments, natural kitchen setting
+  preferredImageDimensions:
+    width: 1200
+    height: 900
+
+posting:
+  preferredFrequency: weekly
+  autoPostingEnabled: false
+  duplicateWindowDays: 30
+
+reviews:
+  responseStyle: warm, personal, grateful
+  includeServiceKeywordsWhenNatural: true
