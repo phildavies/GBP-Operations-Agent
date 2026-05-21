@@ -1,0 +1,14 @@
+{
+  "name": "gbp-operations-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reusable modular AI-assisted Google Business Profile operations system.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}
