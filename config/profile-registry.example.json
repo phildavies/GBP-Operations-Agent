@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "defaultProfileId": "professional-diver-training",
+  "profiles": [
+    {
+      "id": "professional-diver-training",
+      "displayName": "Professional Diver Training",
+      "businessConfig": "config/businesses/professional-diver-training.yaml",
+      "sourceManifest": "config/businesses/professional-diver-training.sources.example.yaml",
+      "gbp": {
+        "accountName": "pending",
+        "locationName": "pending",
+        "locationId": "pending",
+        "placeId": "pending"
+      },
+      "publishing": {
+        "autoPostingEnabled": false,
+        "requiresApproval": true
+      }
+    },
+    {
+      "id": "site-skills-knowhow",
+      "displayName": "Site Skills Knowhow",
+      "businessConfig": "config/businesses/site-skills-knowhow.yaml",
+      "sourceManifest": null,
+      "gbp": {
+        "accountName": "pending",
+        "locationName": "pending",
+        "locationId": "pending",
+        "placeId": "pending"
+      },
+      "publishing": {
+        "autoPostingEnabled": false,
+        "requiresApproval": true
+      }
+    },
+    {
+      "id": "parawans-thai-home-cooking-classes",
+      "displayName": "Parawan's Thai Home Cooking Classes",
+      "businessConfig": "config/businesses/parawans-thai-home-cooking-classes.yaml",
+      "sourceManifest": null,
+      "gbp": {
+        "accountName": "pending",
+        "locationName": "pending",
+        "locationId": "pending",
+        "placeId": "pending"
+      },
+      "publishing": {
+        "autoPostingEnabled": false,
+        "requiresApproval": true
+      }
+    },
+    {
+      "id": "the-gold-bar-koh-tao",
+      "displayName": "The Gold Bar Koh Tao",
+      "businessConfig": "config/businesses/the-gold-bar-koh-tao.yaml",
+      "sourceManifest": null,
+      "gbp": {
+        "accountName": "pending",
+        "locationName": "pending",
+        "locationId": "pending",
+        "placeId": "pending"
+      },
+      "publishing": {
+        "autoPostingEnabled": false,
+        "requiresApproval": true
+      }
+    }
+  ]
+}
