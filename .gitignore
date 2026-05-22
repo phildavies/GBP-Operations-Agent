@@ -9,6 +9,7 @@ dist/
 coverage/
 
 # Runtime data
+.gbp-agent/
 logs/*.jsonl
 reports/generated/
 tmp/
