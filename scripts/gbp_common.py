@@ -86,7 +86,7 @@ def post_form(url: str, data: dict[str, str]) -> dict[str, Any]:
 
 
 def refresh_access_token(token: dict[str, Any], env: dict[str, str]) -> dict[str, Any]:
-    refresh_token = token.get("refresh_token")
+    refresh_token = token.get("refresh_token") or env.get("GOOGLE_REFRESH_TOKEN")
     if not refresh_token:
         raise GbpError("Token is expired and no refresh token is available. Run gbp_oauth.py again.")
 
@@ -112,9 +112,14 @@ def refresh_access_token(token: dict[str, Any], env: dict[str, str]) -> dict[str
 def get_access_token() -> str:
     env = require_google_oauth_config()
     if not TOKEN_PATH.exists():
-        raise GbpError("No Google token found. Run scripts/gbp_oauth.py first.")
+        refresh_token = env.get("GOOGLE_REFRESH_TOKEN")
+        if not refresh_token:
+            raise GbpError("No Google token found. Run scripts/gbp_oauth.py first, or set GOOGLE_REFRESH_TOKEN in .env.")
+        token = {"refresh_token": refresh_token}
+        token = refresh_access_token(token, env)
+    else:
+        token = read_json(TOKEN_PATH)
 
-    token = read_json(TOKEN_PATH)
     if token_is_expired(token):
         token = refresh_access_token(token, env)
 
