@@ -38,7 +38,7 @@
       "id": "parawans-thai-home-cooking-classes",
       "displayName": "Parawan's Thai Home Cooking Classes",
       "businessConfig": "config/businesses/parawans-thai-home-cooking-classes.yaml",
-      "sourceManifest": null,
+      "sourceManifest": "config/businesses/parawans-thai-home-cooking-classes.sources.example.yaml",
       "gbp": {
         "accountName": "pending",
         "locationName": "pending",
