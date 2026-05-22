@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "profiles:list": "python scripts/select_profile.py --list",
+    "profiles:select": "python scripts/select_profile.py",
+    "import:pdt": "python scripts/import_business_sources.py config/businesses/professional-diver-training.sources.example.yaml"
   },
   "devDependencies": {
     "typescript": "^5.8.0"
