@@ -1,0 +1,69 @@
+businessId: parawans-thai-home-cooking-classes
+
+sourceRoot: C:\Users\zugon\OneDrive\Parawan's Thai Home Cooking
+
+contentSources:
+  businessDescriptions:
+    - About Parawan's Home Thai Cooking Classes.docx
+    - Description of Parawan's Thai Cooking Classes.docx
+    - Cooking Class At My Home On Koh Tao.docx
+    - Parawan's Thai Home Cooking Courses.docx
+  gbpContent:
+    - Parawan's Thai Home Cooking Classes Google page.docx
+    - Google Business Address updated 3.6.25.docx
+    - Complaint to Google Business having the wrong address.docx
+    - GBP Events post text
+  bookingAndCalendars:
+    - Links to Cooking Class Calendars.docx
+    - Add a booking social media link for parawanthaicookingclass.docx
+  faqAndReviews:
+    - SEO/Frequently Asked questions FAQ.docx
+    - Review Buddy Prompt.docx
+    - Review Buddy.docx
+  websiteAndSeo:
+    - SEO/Keyword Research for Parawan_Thai_Cooking_Class.xlsx
+    - SEO/Keyword opportunities from Frase and article ideas.docx
+    - SEO/Page Optimisation for parawanthaicookingclass.com pages.xlsx
+    - SEO/Thai Cooking Class Koh Tao.docx
+    - Blog posts to link to for SEO.docx
+  recipesAndDishes:
+    - Dish Descriptions for site with shopping lists for Online bookings
+    - Dishes
+    - Menu
+    - Recipe and Ingredients
+    - Recipes
+    - Original recepies from Por
+
+mediaSources:
+  logos:
+    - Logo
+    - Thai Cooking Class Favicon.ico
+  gbpPostImages:
+    - GBP Post images with new Trafft QR Code
+    - SEO/Images for GMB Posts
+  classPhotos:
+    - Photos
+    - People Pictures
+    - website pictures
+    - Random Por's Cooking Pictures
+    - Online cooking pictures
+  marketingAssets:
+    - Flyers
+    - Post Designs
+    - Random Cooking Class Marketing Images
+    - Cooking Class Voucher.jpg
+  mapsAndQr:
+    - Map
+    - QR Codes for Booking
+
+automationProject:
+  root: C:\Users\zugon\OneDrive\Documents\Parawan's Thai Home Cooking Classes
+  usefulFiles:
+    - README.md
+    - docs
+    - config
+
+notes:
+  - This manifest intentionally excludes credential, recovery, private key, API key, payment, login, and admin-tool files.
+  - Use these sources for draft GBP recommendations and content generation only.
+  - Keep live publishing disabled until approvals and Google API permissions are verified.
