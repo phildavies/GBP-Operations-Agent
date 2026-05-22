@@ -9,6 +9,9 @@
     "check": "tsc --noEmit",
     "profiles:list": "python scripts/select_profile.py --list",
     "profiles:select": "python scripts/select_profile.py",
+    "gbp:auth": "python scripts/gbp_oauth.py",
+    "gbp:list": "python scripts/gbp_list_locations.py",
+    "gbp:sync": "python scripts/gbp_sync_profiles.py",
     "import:pdt": "python scripts/import_business_sources.py config/businesses/professional-diver-training.sources.example.yaml"
   },
   "devDependencies": {
