@@ -1,0 +1,31 @@
+businessId: professional-diver-training
+
+sourceRoot: C:\Users\zugon\OneDrive\Professional Diver Training
+
+contentSources:
+  courseDescriptions:
+    - Course Descriptions Chat.docx
+  homepage:
+    - Homepage Content & Structure.docx
+    - Original homepage
+  pageInventory:
+    - Main pages.xlsx
+  pdfs:
+    - Info PDF's
+
+mediaSources:
+  logos:
+    - Logos
+    - Horizontal Logo.png
+    - Professional Diver Training Logo.jpg
+  websiteImages:
+    - Images
+    - Header section images
+  socialImages:
+    - Images from FB
+  postImages:
+    - Local Post Images
+
+notes:
+  - Keep this file as a source map only. Do not commit private credentials or unpublished sensitive business data.
+  - Use these sources to generate draft GBP recommendations, not automatic live updates.
