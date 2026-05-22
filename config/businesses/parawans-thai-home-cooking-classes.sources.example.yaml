@@ -65,5 +65,6 @@ automationProject:
 
 notes:
   - This manifest intentionally excludes credential, recovery, private key, API key, payment, login, and admin-tool files.
+  - Ignore old PayPal/paypal.me payment references found in archived documents. Parawan now uses Stripe.
   - Use these sources for draft GBP recommendations and content generation only.
   - Keep live publishing disabled until approvals and Google API permissions are verified.
