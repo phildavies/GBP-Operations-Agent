@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import mimetypes
 import re
@@ -99,6 +100,15 @@ def compact_text(text: str, limit: int = 2500) -> str:
     if len(normalized) <= limit:
         return normalized
     return normalized[:limit].rsplit(" ", 1)[0] + "..."
+
+
+def redact_exclusions(text: str, exclusions: list[str]) -> str:
+    redacted = re.sub(r"https?://(?:www\.)?paypal\.me/\S+", "[excluded obsolete payment link]", text, flags=re.IGNORECASE)
+    for exclusion in exclusions:
+        if not exclusion:
+            continue
+        redacted = re.sub(re.escape(exclusion), "[excluded obsolete reference]", redacted, flags=re.IGNORECASE)
+    return redacted
 
 
 def classify_file(path: Path) -> str:
@@ -211,7 +221,7 @@ def inspect_image(path: Path) -> tuple[dict[str, Any], str]:
     return summary, ""
 
 
-def inspect_file(label: str, path: Path) -> SourceResult:
+def inspect_file(label: str, path: Path, exclusions: list[str]) -> SourceResult:
     kind = classify_file(path)
     try:
         if not path.exists():
@@ -245,7 +255,7 @@ def inspect_file(label: str, path: Path) -> SourceResult:
         else:
             summary, text = safe_stat(path), ""
 
-        return SourceResult(label, str(path), kind, "ok", summary, text)
+        return SourceResult(label, str(path), kind, "ok", summary, redact_exclusions(text, exclusions))
     except Exception as exc:
         return SourceResult(label, str(path), kind, "error", {}, error=str(exc))
 
@@ -343,17 +353,18 @@ def write_markdown(pack: dict[str, Any], output_path: Path) -> None:
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print("Usage: import_business_sources.py <source-manifest.yaml>", file=sys.stderr)
-        return 2
+    parser = argparse.ArgumentParser(description="Import business source material into a knowledge pack.")
+    parser.add_argument("manifest", help="Source manifest YAML path.")
+    parser.add_argument("--exclude", action="append", default=[], help="Text or stale reference to redact from extracted excerpts.")
+    args = parser.parse_args()
 
-    manifest_path = (PROJECT_ROOT / sys.argv[1]).resolve()
+    manifest_path = (PROJECT_ROOT / args.manifest).resolve()
     manifest = parse_manifest(manifest_path)
     source_root = Path(str(manifest["sourceRoot"]))
     business_id = str(manifest.get("businessId", "unknown-business"))
 
     results = [
-        inspect_file(label, resolve_source(source_root, value))
+        inspect_file(label, resolve_source(source_root, value), args.exclude)
         for label, value in collect_sources(manifest)
     ]
 
@@ -361,6 +372,7 @@ def main() -> int:
         "businessId": business_id,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "manifestPath": str(manifest_path),
+        "exclusionsApplied": args.exclude,
         "manifest": manifest,
         "summary": summarize_knowledge_pack(results),
         "sources": [result.__dict__ for result in results]
